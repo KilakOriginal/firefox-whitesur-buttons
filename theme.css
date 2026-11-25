@@ -1,0 +1,61 @@
+/* Add your own custom styles here */
+/* === Custom title bar buttons === */
+#TabsToolbar .titlebar-button {
+  appearance: none !important;
+  box-sizing: border-box !important;
+  width: 16px !important;
+  min-width: 16px !important;
+  max-width: 16px !important;
+  height: 16px !important;
+  min-height: 16px !important;
+  max-height: 16px !important;
+  margin: 0 4px !important;
+  padding: 0 !important;
+  border: 0 !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 16px 16px !important;
+  list-style-image: none !important;
+}
+
+#TabsToolbar .titlebar-button :is(.toolbarbutton-icon, image) {
+  display: none !important;
+}
+
+#TabsToolbar > :is(.titlebar-buttonbox-container, #titlebar-buttonbox-container) {
+  position: static !important;
+  inset: auto !important;
+  align-self: stretch !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  margin: 0 8px !important;
+  padding: 0 !important;
+}
+
+/* Light theme icons */
+#TabsToolbar .titlebar-close { background-image: url("WhiteSur/titlebuttons/titlebutton-close.svg") !important; }
+#TabsToolbar .titlebar-min { background-image: url("WhiteSur/titlebuttons/titlebutton-minimize.svg") !important; }
+#TabsToolbar :is(.titlebar-max, .titlebar-restore) { background-image: url("WhiteSur/titlebuttons/titlebutton-maximize.svg") !important; }
+
+#TabsToolbar .titlebar-close:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-close-hover.svg") !important; }
+#TabsToolbar .titlebar-min:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-minimize-hover.svg") !important; }
+#TabsToolbar .titlebar-max:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-maximize-hover.svg") !important; }
+#TabsToolbar .titlebar-restore:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-unmaximize-hover.svg") !important; }
+
+/* Dark theme icons */
+@media (prefers-color-scheme: dark) {
+  #TabsToolbar .titlebar-close { background-image: url("WhiteSur/titlebuttons/titlebutton-close-dark.svg") !important; }
+  #TabsToolbar .titlebar-min { background-image: url("WhiteSur/titlebuttons/titlebutton-minimize-dark.svg") !important; }
+  #TabsToolbar :is(.titlebar-max, .titlebar-restore) { background-image: url("WhiteSur/titlebuttons/titlebutton-maximize-dark.svg") !important; }
+
+  #TabsToolbar .titlebar-close:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-close-hover-dark.svg") !important; }
+  #TabsToolbar .titlebar-min:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-minimize-hover-dark.svg") !important; }
+  #TabsToolbar .titlebar-max:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-maximize-hover-dark.svg") !important; }
+  #TabsToolbar .titlebar-restore:hover { background-image: url("WhiteSur/titlebuttons/titlebutton-unmaximize-hover-dark.svg") !important; }
+}
+
+/* Hide title bar buttons in full screen mode */
+:root[sizemode="maximized"] #TabsToolbar > :is(.titlebar-buttonbox-container, #titlebar-buttonbox-container) {
+  display: none !important;
+}
